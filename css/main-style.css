@@ -1,0 +1,51 @@
+/**  Seeing if normalize.css alone is better to use than these custom generic resets I made   
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+*/
+
+
+/** tips by youtuber Kevin Powell
+
+font-size -> use rem
+
+setting width: typically a percent is good, and also setting the max-width
+
+
+-set html's font-size(html {font-size:62.5%}) to 62.5%  if figuring out rem sizing gets to annoying. this change in html font size will help
+me treat rem like a direct percent to px.(e.g.   2.1rem will equal 21px) don't have more than 70 characters per line for readability reasons. 
+ topography studies show that anything bigger than 75 begins tolook really ugly. 
+
+if you REALLY REALLY REALLY need to set a height, use min-height.  It'll help avoid overflow issues
+
+
+ -avoid setting viewport width(vh). maybe try (ch) instead
+
+*/
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(80px, auto);
+}
+
+header {}
+
+nav {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
